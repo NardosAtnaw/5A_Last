@@ -1,0 +1,1376 @@
+<template>
+  <div class="body-main">
+    <header id="app" class="header">
+         <NavApp />
+      <div class="mid-title">
+        <div
+          class="wrapper"
+          data-aos="slide-left"
+          data-aos-offset="20"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
+          <p>PARTNERS</p>
+        </div>
+      </div>
+    </header>
+    <section class="stand">
+      <div class="container">
+        <div
+          class="stand-content"
+          data-aos="fade-up"
+          data-aos-offset="20"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
+          <h1>WHAT OUR TEAM STANDS FOR</h1>
+          <p>
+            Conceived and formally established by Ali, Almaw, Alemu, Amare &
+            Ashenafi (5A Jurists Consultancy Group PLC) is an aspiring
+            full-service consultancy office in Ethiopia. With prominent lawyers
+            and legal team that has over and above 30 years of experience in
+            consulting and representing clients on a wide range of legal issues
+            concerning business and investment in the country, our consultancy
+            firm has begun to make its early influence felt on the Ethiopian
+            legal system. We are committed to treating each of our clients with
+            courtesy, respect and compassion – regardless of the size of their
+            case. We are a firm that will be here in the future, which we’ve
+            guaranteed with a succession plan to maintain our exemplary service
+            to you for decades to come.
+          </p>
+          <div class="button">
+            <a href="contact" class="btn btn-rounded-darkerblue">Contact Today!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="picture">
+      <div class="wrapper" data-aos="fade-up">
+        <img class="team-img" src="../assets/Image/team2.JPG" alt="" />
+        <img class="team-decor" src="../assets/Icons/teamdecor.svg" alt="" />
+      </div>
+    </section> -->
+
+    <div class="pop-up" v-if="showPopup" @click.self="togglePopup">
+      <div class="inner">
+        <img
+          src="../assets/Icons/close.svg"
+          class="close-modal-btn"
+          @click.self="togglePopup"
+          alt=""
+        />
+        <div class="bio">
+          <img class="decor" src="../assets/Icons/decor3.svg" alt="" />
+          <img class="indiv-img" :src="modalData.img" alt="" />
+
+          <h4>{{ modalData.name }}</h4>
+          <p>
+            {{ modalData.desc }}
+            <br />
+            <br />
+            <a href=""> Contact information – {{ modalData.contact }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="meet-team">
+      <div class="container">
+        <!-- <h2>Meet the Team</h2> -->
+        <div class="team-wrapper">
+          <div
+            @click="togglePopup('ali')"
+            class="card-te"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/Ali.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Ali Mohammed Ali</h4>
+              <p>
+                Ali Mohammed Ali has earned his Bachelor of Law /LL. B/ from
+                Addis Ababa University, and his Master of Laws /LL.M/ from...
+              </p>
+            </div>
+          </div>
+          <div
+            @click="togglePopup('amare')"
+            class="card-te"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/Amare.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Amare Ashenafi</h4>
+              <p>
+                Amare earned his law degree (LLB) from Bahir Dar University, his
+                LLM from Mekelle University in Tax and ...
+              </p>
+            </div>
+          </div>
+          <div
+            @click="togglePopup('alemu')"
+            class="card-te"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/Alemu.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Alemu Korme</h4>
+              <p>
+                Alemu earned his law degree (LLB) from Addis Ababa University,
+                his MBA from Lead Star University in...
+              </p>
+            </div>
+          </div>
+          <div
+            @click="togglePopup('almaw')"
+            class="card-te"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/Almaw.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Almaw Wolie</h4>
+              <p>
+                Almaw has received his Bachelor of Laws /LL. B/ from Addis Ababa
+                University in July 2000 and his Master...
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-te"
+            @click="togglePopup('ashenafi')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img
+                class="indiv-img"
+                src="../assets/Image/Ashenafi.jpg"
+                alt=""
+              />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Ashenafi Yirga</h4>
+              <p>
+                A graduate of the Law School of Bahir Dar University as an
+                outstanding student, Ashenafi heads the...
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card-te"
+            @click="togglePopup('mesnbet')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/mesnbet.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Dr. Mesnbet Assefa</h4>
+              <p>
+                Mesenbet earned his LL.B from Bahir Dar University in 2006 and
+                graduated with distinction. He further...
+              </p>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+
+    <section class="leader">
+      <div class="container">
+        <h2>LEADERSHIP</h2>
+        <p>CEO and one of the founders of the 5A </p>
+        <div class="team-wrapper">
+          <div
+            @click="togglePopup('ali')"
+            class="card-te"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/Ali.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Ali Mohammed Ali</h4>
+              <p> 
+                <b>Founder and Managing Partner</b><br>
+                Ali Mohammed Ali has earned his Bachelor of Law /LL. B/ from
+                Addis Ababa University, and his Master of Laws /LL.M/ from...
+              </p>
+            </div>
+          </div>
+           <div
+            @click="togglePopup('amare')"
+            class="card-te"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/Amare.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Amare Ashenafi</h4>
+              <p>
+                <b>Founder and Deputy Managing Partner</b><br>
+                Amare earned his law degree (LLB) from Bahir Dar University, his
+                LLM from Mekelle University in Tax and ...
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-te"
+            @click="togglePopup('mesnbet')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/mesnbet.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Dr. Mesnbet Assefa</h4>
+              <p>
+                Mesenbet earned his LL.B from Bahir Dar University in 2006 and
+                graduated with distinction. He further...
+              </p>
+            </div>
+          </div>
+        
+         
+        </div>
+      </div>
+    </section>
+
+        <section class="leader" id="additional">
+      <div class="container">
+        <h2>ADDITIONAL TEAM</h2>
+        <!-- <p> </p> -->
+        <div class="team-wrapper">
+       
+          
+  
+
+          <div
+            class="card-te"
+            @click="togglePopup('hanna')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/hanna.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Hanna Yohannas</h4>
+              <p>
+                Hanna Yohannes is an assistant lawyer and office manager at 5A
+                Jurists Consultancy Group. First, Appointed...
+              </p>
+            </div>
+          </div>
+          <div
+            class="card-te"
+            @click="togglePopup('linora')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/linora.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Linora Mohammed</h4>
+              <p>
+                Assistant Lawyer of 5A, Linora earned her law degree (LLB) from
+                Adigrat University as an outstanding student.
+              </p>
+            </div>
+          </div>
+   <!-- <div
+            class="card"
+            @click="togglePopup('aynalem')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/additionalteam.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Aynalem Zenebe</h4>
+              <p>
+                Aynalem Zenebe earned her LLB degree from Hawassa University and has also received a two years...
+              </p>
+            </div>
+          </div>
+            <div
+            class="card"
+            @click="togglePopup('haftom')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/additionalteam.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Haftom Sibhatu</h4>
+              <p>
+               Haftom earned his law degree, LLB, from Bahir Dar University and has also received a post-graduate certificate from the federal ...
+              </p>
+            </div>
+          </div>
+      
+          <div
+            class="card"
+            @click="togglePopup('alebachew')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/additionalteam.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Alebachew Tiruneh</h4>
+              <p>
+               Alebachew Tiruneh earned his History and Civics and Ethical Education degree from Bahir Dar University ...
+              </p>
+            </div>
+          </div>
+
+            <div
+            class="card"
+            @click="togglePopup('solomon')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/additionalteam.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Solomon Habte </h4>
+              <p>
+             Solomon Habte Guangul earned his law degree, LLB, from Mekelle University. In his stay in Mekelle ...
+              </p>
+            </div>
+          </div>
+                <div
+            class="card"
+            @click="togglePopup('berihun')"
+            data-aos="zoom-out-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="indiv-pic">
+              <img class="indiv-img" src="../assets/Image/additionalteam.jpg" alt="" />
+              <div class="bottom-decor"></div>
+            </div>
+            <div class="name">
+              <h4>Berihun Adugna </h4>
+              <p>
+             Berihun Adugna Mihretu has earned his Bachelor of Laws (LL. B) from Mekele University Faculty of Law, in 2007 ...
+              </p>
+            </div>
+          </div> -->
+         
+        </div>
+      </div>
+    </section>
+        <section class="space"></section>
+ <ContactApp />
+    <section class="space"></section>
+    <FooterApp />
+  </div>
+</template>
+
+<script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+export default {
+  data() {
+    return {
+      modalData: {},
+      ali: {
+        id: 1,
+        img: require("../assets/Image/Ali.jpg"),
+        name: "Ali Mohammed Ali",
+        desc: "Founder and Managing Partner of 5A, Ali Mohammed Ali has earned his Bachelor of Law /LL. B/ from Addis Ababa University, and his Master of Laws /LL.M/ from Stockholm University.First, he was appointed as a High Court Judge and served for 5 years, and then he was upgraded to the Amhara National Regional State Supreme Court where he served for about 10 years.He was then appointed as Head of Amhara National Regional State Prosecutor’s Office, and then appointed as Head of Amhara National Regional State Anti-Corruption Office and served for 3 years.Mr. Ali has shown unprecedented performance in his career and hence he was appointed in the Federal Supreme Court and served at the Cassation Bench for over 10 years. He has published so many articles, provide several pieces of trainingd",
+        contact: "alimohammed@5alawoffice.com ",
+      },
+      amare: {
+        id: 2,
+        img: require("../assets/Image/Amare.jpg"),
+        name: "Amare Ashenafi",
+        desc: "Founder and Partner of 5A, Amare earned his law degree (LLB) from Bahir Dar University, his LLM from Mekelle University in Tax and Investment Law, and two years post-graduate certificate from Federal Judges and Prosecutors Training Center. In his stay in Bahir Dar University, he was Student`s Union President and Ethiopian Universities President for more than three years.He worked as a District Prosecutor, Appellate Court Presiding Judge and President, Court Manager in Federal First Instance and Supreme Court of Ethiopia before founding 5A. With over 12 years of administrative and legal experience, he has advised government, national and multinational companies on reorganization, legal drafting, and investment issues.He presides as a judge in arbitration and advice clients on court cases. He has also lectured law at Saint Merry University on a part-time basis.",
+        contact: "amareashenafi@5alawoffice.com ",
+      },
+      alemu: {
+        id: 3,
+        img: require("../assets/Image/Alemu.jpg"),
+        name: "Alemu Korme",
+        desc: "Founder and Partner of 5A, Alemu earned his law degree (LLB) from Addis Ababa University, his MBA from Lead Star University in collaboration with Ashland University, and a two years post-graduate certificate from Federal Judges and Prosecutors Training Center.He worked as an Assistant judge in Oromiya Supreme Court, First Instance and Appellate Court Judge, and Ethiopian Federal Revenue Authority Legal Expert before founding 5A. With over 12 years of legal experience, he has advised national and multinational companies on corporate and investment issues. He represents clients in arbitration and court cases. He has also lectured law at Rift Valley University on a part-time basis.",
+        contact: "alemukorme@5alawoffice.com",
+      },
+      almaw: {
+        id: 4,
+        img: require("../assets/Image/Almaw.jpg"),
+        name: "Almaw Wolie",
+        desc: "Founder and Partner of 5A, Almaw has received his Bachelor of Laws /LL. B/ from Addis Ababa University in July 2000 and his Master of Laws /LL.M/ in Constitutional and Public law from the same University in July 2007. He served for over 19.6 years in Ethiopian Judiciary.From this extensive judicial service, he had served as a High Court Judge for about 3 years and 4years as a judge of Amhara National Regional State Supreme Court. For the last 12 years, he had served as a judge at the apex of the Ethiopian Judiciary- Federal Supreme Court.From these Twelve Years of service, he served for about 9 months on the appellate bench and about 11 years and 3 months in the cassation division with not less than five judges. He served in the cassation division with not less than five judges as a judge and Presiding judge.",
+        contact: "almawwolie@5alawoffice.com",
+      },
+
+      ashenafi: {
+        id: 5,
+        img: require("../assets/Image/Ashenafi.jpg"),
+        name: "Ashenafi Yirga",
+        desc: "Founder and Partner of 5A, A graduate of the Law School of Bahir Dar University as an outstanding student, Ashenafi heads the Litigation Section in 5A. He has over 12 years of experience as a judge in the Amhara State Supreme Court and Federal High Court of Ethiopia.",
+        contact: "ashenafiyirga@5alawoffice.com",
+      },
+      mesnbet: {
+        id: 6,
+        img: require("../assets/Image/mesnbet.jpg"),
+        name: "DR.Mesnbet Assefa",
+        desc: "Mesenbet earned his LL.B from Bahir Dar University in 2006 and graduated with distinction. He further pursued his graduate education and studied his LL.M in 2008 at the University of Pretoria in South Africa. He received his Ph.D. at the National University of Ireland Galway (NUIG) in 2017.Mesenbet has extensive experience in international law, comparative constitutional law, criminal law, business law, and human rights. Mesenbet has published in numerous international and local journals. He has presented his research findings in numerous Universities including Yale School of Law, London School of Economics, and the University of Seville. His particular research interests include development, Security/counterterrorism, human rights, constitutional law, and freedom of expression.Mesenbet has served in numerous positions including as Head of the School of Law Addis Ababa University, Associate Dean for Graduate Studies of Addis Ababa University School of Law, and Director of Mekelle University Human Rights Centre. Mesenbet has also extensive experience in consulting governmental, inter-governmental, and non-governmental organizations at various levels. Currently, he also serves as a committee member in the National Legal Reform Council of Ethiopia.",
+        contact: "mesnbetassefa@5alawoffice.com",
+      },
+      hanna: {
+        id: 7,
+        img: require("../assets/Image/hanna.jpg"),
+        name: "Hanna Yohannes",
+        desc: "Hanna Yohannes is an assistant lawyer and office manager at 5A Jurists Consultancy Group. Hanna believes that excellence can be achieved through dedication, focus and hard work. Hanna earned her Bachelors of Law /LL.B./from Addis Ababa University. In her stay at Addis Ababa University, she was working on human right and participated women’s empowerment and leadership training at Addis Ababa University. She participate in a voluntary work on various organization like orphanage village and on elderly support. She also worked as a legal advisor in NGOs. and associate at #I CARE campaign.",
+        contact: "hannayohannes@5alawoffice.com",
+      },
+      linora: {
+        id: 8,
+        img: require("../assets/Image/linora.jpg"),
+        name: "Linora Mohammed",
+        desc: "Assistant Lawyer of 5A, Linora earned her law degree (LLB) from Adigrat University as an outstanding student. In her stay of Adigrat University, she was the founder and the vice president of the Human Rights and Justice Club. She has participated in the 2015 Human rights day Moot court competition by representing the Law School of Adigrat University, which was organized by the Ethiopian Human right commission Mekelle branch which was based on Human Trafficking. In addition to that, she has persistently taken part in volunteer service in the summer at Federal Attorney General as an assistant of the public prosecutor at women’s and children’s offices. Post-graduation she served as a lecturer in the Law school of Adigrat University on a full-time basis.  ",
+        contact: "linoramohammed@5alawoffice.com",
+      },
+            aynalem: {
+        id: 9,
+        img: require("../assets/Image/additionalteam.jpg"),
+        name: "AYNALEM ZENEBE",
+        desc: "JUNIOR ASSOCIATE (OROMIYA REGION) Aynalem Zenebe earned her LLB degree from Hawassa University and has also received a two years post-graduate certificate from the Federal Justice Organs training center and she has an LLM in commercial and investment law from Oromia State University / in view 2020/. She has served as a public prosecutor at Oromia Regional state justice bureau for seven years and from 2015 to now is a private lawyer and associate of this office.",
+        contact: "aynalem@5alawoffice.com",
+      },
+          haftom: {
+        id: 10,
+        img: require("../assets/Image/additionalteam.jpg"),
+        name: "HAFTOM SIBHATU",
+        desc: "Junior Associate (Tigray Region) Haftom earned his law degree, LLB, from Bahir Dar University and has also received a post-graduate certificate from the federal justice professionals training center. In his stay, for two years, in the federal justice professionals training center he has taken training on various laws, civil, criminal, labour, business laws, etc. Besides, Haftom has worked as a judge in a high court for four years. He has experienced numerous cases more of civil, business, labour, and criminal cases. This opportunity has contributed great experience to scrutinize and to know deeply about the laws and the legal system of the country. What is more, after he left working as a judge on my request, Haftom has been working as an attorney for the last seven years. He has been working as an attorney both in the federal and regional courts. In these years he has litigated so many cases, issues and gives legal advice to clients on court cases.Furthermore, Haftom has presided as a judge Arbitration and dispute settlements. Haftom has also lectured law at Hashenge College on a part-time basis..",
+        contact: "haftom@5alawoffice.com",
+      },
+ alebachew: {
+        id: 11,
+        img: require("../assets/Image/additionalteam.jpg"),
+        name: "Alebachew Tiruneh",
+        desc: "“OF COUNSEL” ATTORNEY Alebachew Tiruneh earned his History and Civics and Ethical Education degree from Bahir Dar University, his MA degree from Addis Ababa University in Federal Studies, an eight-month entrepreneur training certificate from eagles training center, a one-week Business Opportunity Meeting training certificate from Ethiopia DXN office, and a six-month Teaching Methods Training from Wollo University. He lectured at Wollo University and Koteb Metropole University on a part-time basis, in his stay at Wollo University he was lecturing different courses and he was supervised, advised, and examining different research studies for more than five years.",
+        contact: "alebachew@5alawoffice.com",
+      },
+solomon: {
+        id: 12,
+        img: require("../assets/Image/additionalteam.jpg"),
+        name: "SOLOMON HABTE",
+        desc: "JUNIOR ASSOCIATE (TIGRAY REGION) Solomon Habte Guangul earned his law degree, LLB, from Mekelle University. In his stay in Mekelle University, as proof of his early call and earnest desire to service and duty, he has served as Legal Counselling in Tigray Women’s Law Project. What is more, Solomon has worked as a Public Defender in Tigray Supreme court for three years; he has experienced numerous cases more of criminal cases.This opportunity has contributed great experience to scrutinize and to know deeply about the laws and the legal system of the country. Furthermore, Ato Solomon has been working as an attorney for the last fifteen years. He has been working as an attorney both in the federal and regional courts. In these years he has litigated on so many civil, business, labour, and more cases. Also, he has served as a President of the Tigray BAR Association for more than four years, as a member of the Ethiopian BAR Association, as a member of Tigray Judiciary Committee, and as a member of Tigray Advocates’ Discipline Committee. Ato Solomon has presided as a judge in Arbitration and dispute settlements.",
+        contact: "solomon@5alawoffice.com",
+      },
+     berihun: {
+        id: 13,
+        img: require("../assets/Image/additionalteam.jpg"),
+        name: "BERIHUN ADUGNA",
+        desc: "JUNIOR ASSOCIATE (AMHARA REGION) Berihun Adugna Mihretu has earned his Bachelor of Laws (LL. B) from Mekele University Faculty of Law, in 2007 and, his Master of Laws (LL.M) in Fundamental Rights from the University of South Africa in 2012. He was appointed as High Court Judge in Amhara National Regional State /ANRS/and served for 3 years and then he joined ANRS Justice Professionals Training and Research Institution and served as a senior trainer for 3 years. Mr. Berihun’s last experience in government office was his appointment as a judge in ANRS Supreme Court and there he served for more than five years. Now he is working as an Attorney and consultant at Law.",
+        contact: "berihun@5alawoffice.com",
+      },
+      showPopup: false,
+    };
+  },
+  methods: {
+    togglePopup(name) {
+      switch (name) {
+        case "ali":
+          this.modalData = this.ali;
+          break;
+        case "amare":
+          this.modalData = this.amare;
+          break;
+        case "alemu":
+          this.modalData = this.alemu;
+          break;
+        case "almaw":
+          this.modalData = this.almaw;
+          break;
+        case "ashenafi":
+          this.modalData = this.ashenafi;
+          break;
+        case "mesnbet":
+          this.modalData = this.mesnbet;
+          break;
+        case "hanna":
+          this.modalData = this.hanna;
+          break;
+        case "linora":
+          this.modalData = this.linora;
+          break;
+          case "aynalem":
+          this.modalData = this.aynalem;
+          break;
+          case "haftom":
+          this.modalData = this.haftom;
+          break;
+          case "alebachew":
+          this.modalData = this.alebachew;
+          break;
+           case "solomon":
+          this.modalData = this.solomon;
+          break;
+            case "berihun":
+          this.modalData = this.berihun;
+          break;
+      }
+      this.showPopup = !this.showPopup;
+    },
+  },
+  mounted() {
+    AOS.init({
+      duration: 900,
+      offset: 120,
+      easing: "ease",
+      once: false,
+      anchorPlacement: "top-bottom",
+    });
+       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/62220908a34c245641296e76/1ftaf6j28';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+
+  },
+  created() {},
+};
+</script>
+
+
+<style lang="scss" scoped>
+.body-main {
+  .show-links,
+  .show-links2 {
+    display: flex !important;
+  }
+  .fixed {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    background: $A-darkerblue;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999999;
+  }
+  header {
+    background: url("../assets/Image/About.JPG") rgba(3, 42, 86, 0.3) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 70vh;
+    width: 100%;
+
+    .mid-title {
+      display: grid;
+      place-content: center;
+      .wrapper {
+        margin-top: 15rem;
+        p {
+          margin-top: 0.94rem;
+          font-size: 2rem;
+          color: $A-white;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  @include responsive($md) {
+    header {
+      nav {
+        .container {
+          .links-container {
+            width: 30vh;
+            .close-btn {
+              width: 6rem;
+            }
+            .nav-links {
+              padding-top: 15rem;
+            }
+          }
+        }
+      }
+      .mid-title {
+        .wrapper {
+          margin-top: 15rem;
+          p {
+            font-size: 2.3rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive($lg) {
+    header {
+   
+      .mid-title {
+        .wrapper {
+          margin-top: 20rem;
+        }
+      }
+    }
+  }
+  @include responsive($xl) {
+    header {
+    
+      .mid-title {
+        .wrapper {
+          margin-top: 15rem;
+          p {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .stand {
+    margin-top: 8rem;
+
+    background: url("../assets/Image/city.jpg") no-repeat rgba(0, 0, 0, 0.49);
+
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    .container {
+      padding: 2.5rem 0 4rem;
+
+      .stand-content {
+        // max-width: 32.69rem;
+
+        h1 {
+          @extend .h2;
+          color: #fff;
+          margin-bottom: 1.69rem;
+          text-align: center;
+        }
+        p {
+          font-weight: normal;
+          font-size: 1.13rem;
+          line-height: 1.75rem;
+          color: #fff;
+          margin-bottom: 1.2rem;
+          // max-width: 28.19rem;
+          text-align: center;
+        }
+        .button {
+          display: grid;
+          place-content: center;
+          a {
+            @extend .text;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  @include responsive($md) {
+    .stand {
+      .container {
+        .stand-content {
+          margin-left: 3rem;
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+  @include responsive($lg) {
+    .stand {
+      margin: 7rem 0;
+      background-attachment: none;
+    }
+  }
+  @include responsive($xl) {
+    .stand {
+      margin-top: 10rem;
+      .container {
+        .stand-content {
+          margin-left: 10rem;
+          margin-right: 10rem;
+          h1 {
+            margin-top: 3rem;
+          }
+          p {
+            margin-top: 3rem;
+            font-size: 1.13rem;
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+  }
+  .picture {
+    margin-top: 8rem;
+    // background: rgba(42, 46, 83, 0.25);
+    .wrapper {
+      position: relative;
+      z-index: -1;
+      .team-img {
+        height: 20rem;
+        width: 100%;
+        object-fit: cover;
+      }
+      .team-decor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 20rem;
+        opacity: 0.7;
+      }
+    }
+  }
+  @include responsive($md) {
+    .picture {
+      margin-top: 10rem;
+      .wrapper {
+        .team-img {
+          height: 25rem;
+        }
+        .team-decor {
+          height: 25rem;
+        }
+      }
+    }
+  }
+  @include responsive($xl) {
+    .picture {
+      margin-top: 10rem;
+      .wrapper {
+        .team-img {
+          height: 30rem;
+        }
+        .team-decor {
+          height: 30rem;
+        }
+      }
+    }
+  }
+  @include responsive($xxl) {
+    .picture {
+      .wrapper {
+        .team-img {
+          height: 35rem;
+        }
+        .team-decor {
+          height: 35rem;
+        }
+      }
+    }
+  }
+.space{
+  margin-top: 8rem;
+}
+  .pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 0, 19, 0.37);
+    // display: none;
+    display: grid;
+    place-items: center;
+    z-index: 9999999;
+    .inner {
+      position: absolute;
+      z-index: 999999999;
+      // left: 60%;
+      width: 22rem;
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      // position: relative;
+      transition: left 0.3s linear;
+      .close-modal-btn {
+        position: absolute;
+        right: 0.5rem;
+        top: -1rem;
+        width: 3rem;
+        cursor: pointer;
+      }
+
+      .bio {
+        display: grid;
+        place-items: center;
+        // margin-top: 1rem;
+        .decor {
+          position: absolute;
+          z-index: 99;
+          top: 0;
+          left: 1rem;
+          width: 8rem;
+          margin-top: 1rem;
+        }
+
+        .indiv-img {
+          width: 12rem;
+          position: relative;
+        }
+        h4 {
+          @extend .title;
+          color: $A-darkerblue;
+          margin-top: 1rem;
+          font-size: 1rem;
+          font-weight: 600;
+          text-align: center;
+        }
+        p {
+          color: $A-darkerblue;
+          @extend .text;
+          font-size: 0.8rem;
+          line-height: 1.13rem;
+          margin-top: 0.5rem;
+          text-align: center;
+          a {
+            color: $A-lightblue;
+          }
+        }
+      }
+    }
+  }
+  @include responsive($md) {
+    .pop-up {
+      .inner {
+        width: 30rem;
+
+        padding: 2rem;
+
+        .bio {
+          .decor {
+            left: 2rem;
+            width: 10rem;
+            margin-top: 2rem;
+          }
+
+          .indiv-img {
+            width: 15rem;
+          }
+          h4 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+  .topdecor {
+    margin-top: 8rem;
+    position: relative;
+
+    .left {
+      background: $A-darkerblue;
+      width: 100%;
+      height: 30vh;
+      display: grid;
+      place-items: center;
+      .left-decor {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .edge-decor1 {
+        top: -0.5rem;
+        left: -0.5rem;
+        position: absolute;
+        z-index: 999;
+      }
+      h2 {
+        @extend .title;
+        color: $A-white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        z-index: 9999;
+      }
+    }
+    .pass-decor {
+      display: none;
+      margin-top: -5rem;
+      position: absolute;
+      z-index: 999;
+      opacity: 0.7;
+    }
+    .right {
+      position: relative;
+      .decor {
+        height: 20rem;
+        width: 100%;
+        object-fit: cover;
+      }
+      .edge-decor {
+        bottom: 0;
+        right: -0.5rem;
+        position: absolute;
+        z-index: 999;
+      }
+    }
+  }
+  @include responsive($md) {
+    .topdecor {
+      display: flex;
+      width: 100%;
+      .left {
+        height: 40vh;
+      }
+      .pass-decor {
+        display: block;
+        margin-top: 0rem;
+        left: -4rem;
+        bottom: 0;
+        width: 40rem;
+      }
+      .right {
+        .decor {
+          height: 40vh;
+        }
+      }
+    }
+  }
+  @include responsive($lg) {
+    .topdecor {
+      display: flex;
+      .edge-decor1 {
+        width: 8rem;
+      }
+      .left {
+        width: 80%;
+        height: 30vh;
+        h2{
+          font-size: 3rem;
+        }
+      }
+      .pass-decor {
+        margin-top: 0rem;
+        left: 3.3rem;
+        bottom: 0;
+        width: 50rem;
+      }
+      .right {
+        .decor {
+          height: 30vh;
+        }
+        .edge-decor {
+          width: 8rem;
+        }
+      }
+    }
+  }
+  @include responsive($xl) {
+    .topdecor {
+      .left {
+        width: 45%;
+        height: 40vh;
+        h2 {
+          font-size: 3rem;
+        }
+        .edge-decor1 {
+          width: 10rem;
+        }
+      }
+      .pass-decor {
+        margin-left: 8rem;
+        opacity: 0.5;
+        bottom: 0;
+      }
+      .right {
+        // background: url("../assets/Image/team2.JPG") rgba(3, 42, 86, 0.3);
+        .decor {
+          height: 40vh;
+          width: 80rem;
+
+          z-index: 9999;
+        }
+        .edge-decor {
+          width: 10rem;
+        }
+      }
+    }
+  }
+  @include responsive($xxl) {
+    .topdecor {
+      .left {
+        width: 75%;
+        height: 50vh;
+        h2 {
+          font-size: 4rem;
+        }
+      }
+      .pass-decor {
+        margin-left: 40rem;
+      }
+      .right {
+        .decor {
+          height: 50vh;
+        }
+      }
+    }
+  }
+  .meet-team {
+    // margin-top: 8rem;
+
+    .container {
+      h2 {
+        @extend .title;
+        color: $A-darkerblue;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      .team-wrapper {
+        display: grid;
+        place-items: center;
+        .card-te {
+          margin-top: 5rem;
+          width: 16rem;
+          cursor: pointer;
+
+ &:hover{
+   
+          opacity: .7;
+        }
+          .indiv-pic {
+            // .indiv-img {
+            // }
+            .bottom-decor {
+              width: 13rem;
+              height: 1rem;
+              background: $A-lightblue;
+     
+            }
+          }
+                    &:hover .bottom-decor{
+                  transform: translateX(3rem);
+                   
+  
+        }
+          .name {
+            h4 {
+              @extend .title;
+              color: $A-darkerblue;
+              margin-top: 0.94rem;
+              font-size: 1.5rem;
+              text-align: left;
+            }
+            p {
+              color: $A-darkerblue;
+              @extend .text;
+              font-size: 0.96rem;
+              margin-top: 0.94rem;
+              text-align: left;
+            }
+          }
+        }
+       
+      }
+    }
+  }
+  @include responsive($md) {
+    .meet-team {
+      .container {
+        .team-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          // .card-te {
+          //   // .indiv-pic {
+          //   // }
+          // }
+        }
+      }
+    }
+  }
+  @include responsive($lg) {
+    .meet-team {
+      .container {
+        h2 {
+          font-size: 2rem;
+        }
+        .team-wrapper {
+          grid-template-columns: 1fr 1fr 1fr;
+
+          .card-te {
+            width: 19rem;
+
+            .indiv-pic {
+              width: 19rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive($xl) {
+    .meet-team {
+      .container {
+        h2 {
+          font-size: 2.5rem;
+        }
+        .team-wrapper {
+          gap: 1.5rem;
+
+          .card-te {
+            margin-top: 8rem;
+
+            .indiv-pic {
+              width: 19rem;
+            }
+          }
+        }
+      }
+    }
+  }
+ .leader {
+    margin-top: 5rem;
+
+    .container {
+      h2 {
+        @extend .title;
+        color: $A-darkerblue;
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      p{
+            @extend .text;
+text-align: center;
+margin-top: .8rem;
+          font-size: 0.8rem;
+          color: $A-lightblue;
+          font-weight: 400;
+          line-height: 1rem;
+      }
+      .team-wrapper {
+        display: grid;
+        place-items: center;
+        .card-te {
+          margin-top: 5rem;
+          width: 16rem;
+          cursor: pointer;
+
+ &:hover{
+   
+          opacity: .7;
+        }
+          .indiv-pic {
+            // .indiv-img {
+            // }
+            .bottom-decor {
+              width: 13rem;
+              height: 1rem;
+              background: $A-lightblue;
+     
+            }
+          }
+                    &:hover .bottom-decor{
+                  transform: translateX(3rem);
+                   
+  
+        }
+          .name {
+            h4 {
+              @extend .title;
+              color: $A-darkerblue;
+              margin-top: 0.94rem;
+              font-size: 1.5rem;
+              text-align: left;
+            }
+            p {
+              color: $A-darkerblue;
+              @extend .text;
+              font-size: 0.96rem;
+              margin-top: 0.94rem;
+              text-align: left;
+            }
+          }
+        }
+       
+      }
+    }
+  }
+  @include responsive($md) {
+    .leader{
+      .container {
+        .team-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          // .card-te {
+          //   // .indiv-pic {
+          //   // }
+          // }
+        }
+      }
+    }
+  }
+  @include responsive($lg) {
+    .leader {
+      .container {
+        h2 {
+          font-size: 2rem;
+        }
+        .team-wrapper {
+          grid-template-columns: 1fr 1fr 1fr;
+
+          .card-te {
+            width: 19rem;
+
+            .indiv-pic {
+              width: 19rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive($xl) {
+    .leader {
+      .container {
+        h2 {
+          font-size: 2.5rem;
+        }
+        .team-wrapper {
+          gap: 1.5rem;
+
+          .card-te {
+            margin-top: 8rem;
+
+            .indiv-pic {
+              width: 19rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+ 
+
+ 
+}
+</style>
