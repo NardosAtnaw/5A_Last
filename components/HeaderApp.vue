@@ -1304,7 +1304,7 @@ export default {
           .moto-wrapper {
             justify-content: left;
             margin-left: -34rem;
-            margin-top: 5rem;
+            margin-top: 15rem;
             .rectangle {
               img {
                 width: 20rem;

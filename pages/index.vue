@@ -651,16 +651,17 @@ export default {
       .wrapper {
         .welcome {
           display: grid;
-          place-content: center;
-          @include responsive($md) {
+          place-items: center;
+
+          @include responsive($xl) {
             display: flex;
             gap: 2rem;
           }
           img {
-            width: 40rem;
+            width: 45rem;
             // height: 20rem;
             object-fit: cover;
-            @include responsive($md) {
+            @include responsive($xl) {
               width: 45rem;
             }
           }
@@ -673,7 +674,7 @@ export default {
               text-align: center;
               text-transform: uppercase;
               color: $A-darkerblue;
-              @include responsive($md) {
+              @include responsive($xl) {
                 margin-top: 0rem;
                 font-size: 2.5rem;
               }
@@ -962,7 +963,7 @@ export default {
     .left {
       background: $A-darkerblue;
       width: 100%;
-      height: 30vh;
+      height: 40vh;
       display: grid;
       place-items: center;
 
@@ -970,6 +971,7 @@ export default {
         display: none;
         position: absolute;
         left: 0;
+        width: 12rem;
         bottom: 0;
         z-index: 999;
       }
@@ -1083,10 +1085,11 @@ export default {
       display: flex;
       .edge-decor1 {
         width: 8rem;
+        overflow: hidden;
       }
       .left {
         width: 80%;
-        height: 30vh;
+        height: 40vh;
       }
       .pass-decor {
         margin-top: 0rem;
@@ -1108,7 +1111,7 @@ export default {
     .topdecor {
       .left {
         width: 60%;
-        height: 40vh;
+        height: 50vh;
 
         h2 {
           margin-left: 3rem;
@@ -1123,6 +1126,10 @@ export default {
         margin-left: 15rem;
       }
       .right {
+        // height: 50vh;
+        .best {
+          height: 50vh;
+        }
         .decor {
           height: 40vh;
         }

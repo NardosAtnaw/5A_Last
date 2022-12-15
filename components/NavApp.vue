@@ -520,7 +520,7 @@ export default {
           .moto-wrapper {
             display: flex;
             justify-content: center;
-            margin-top: 5rem;
+            margin-top: 15rem;
             .rectangle {
               img {
                 width: 18rem;
