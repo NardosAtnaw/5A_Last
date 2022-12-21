@@ -21,9 +21,9 @@
             <img src="../assets/Icons/decor.svg" alt="" />
             <ul>
               <li>
-                <a href="mailto:mesenbet.assefa@aau.edu.et"
+                <a href="mailto:info@5alawoffice.com"
                   ><img src="../assets/Icons/mail.svg" alt="" />
-                  <p>mesenbet.assefa@aau.edu.et</p></a
+                  <p>info@5alawoffice.com</p></a
                 >
               </li>
               <li>
@@ -57,7 +57,7 @@
           </p>
           <form
             method="POST"
-            action="https://formsubmit.co/mesenbet.assefa@aau.edu.et"
+            action="https://formsubmit.co/info@5alawoffice.com"
             enctype="multipart/form-data"
             class="myform"
           >
@@ -306,6 +306,7 @@ export default {};
     .container {
       .contact-box {
         display: flex;
+        justify-content: center;
         .contact-form {
           background: $A-darkerblue;
           padding: 1rem;

@@ -16,10 +16,10 @@
         <div class="links-container">
           <img src="../assets/Icons/close.svg" class="close-btn" alt="" />
           <div class="upper-nav">
-            <p>mesenbet.assefa@aau.edu.et | +25116504949</p>
+            <p>info@5alawoffice.com | +25116504949</p>
             <ul>
               <li>
-                <a href="mailto:mesenbet.assefa@aau.edu.et"
+                <a href="mailto:info@5alawoffice.com"
                   ><img src="../assets/Icons/mail.svg" alt="" />
                 </a>
               </li>
@@ -281,13 +281,13 @@
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
         >
-          <div class="rectangle">
+          <!-- <div class="rectangle">
             <img src="../assets/Icons/Rectangle.svg" alt="" />
-          </div>
+          </div> -->
           <div class="moto">
-            <p>EXPERTISE.</p>
-            <p>EXPERIENCE.</p>
-            <p>EXCELLENCE.</p>
+            <p>EXPERTISE. EXPERIENCE. EXCELLENCE.</p>
+            <!-- <p>EXPERIENCE.</p>
+            <p>EXCELLENCE.</p> -->
           </div>
         </div>
       </div>
@@ -603,7 +603,6 @@ export default {
     background-color: #09499233;
     margin-top: -8rem;
     z-index: 999;
-    
   }
   .slide_viewer {
     height: 95vh;
@@ -615,7 +614,7 @@ export default {
   .slide img {
     width: 100%;
     height: 95vh;
- 
+
     object-fit: cover;
     display: block;
     margin-left: auto;
@@ -882,7 +881,7 @@ export default {
         align-items: center;
         .logo {
           margin-top: 1rem;
-     
+
           img {
             // z-index: 99999999999;
             width: 11rem;
@@ -895,7 +894,7 @@ export default {
             margin: auto;
             margin-top: 0.5rem;
             color: $A-white !important;
-           border: 1 !important;
+            border: 1 !important;
             border-style: solid !important;
             width: 2.35rem;
           }
@@ -1036,18 +1035,17 @@ export default {
         margin-top: -55rem;
         margin-left: 2rem;
         @include responsive($md) {
-          margin-left: -3rem;
+          margin-left: 5rem;
         }
         .moto-wrapper {
           display: grid;
           place-items: center;
           // margin-top: -20rem;
-         
 
           .rectangle {
             @include responsive($xl) {
-            margin-left: 40rem;
-          }
+              margin-left: 40rem;
+            }
             img {
               margin-top: 20rem;
 
@@ -1061,8 +1059,8 @@ export default {
           .moto {
             margin-top: -2rem;
             p {
-              margin-top: 0rem;
-              font-size: 2rem;
+              margin-top: 35rem;
+              font-size: 2.8rem;
               color: $A-white;
               font-weight: 700;
               text-transform: uppercase;
@@ -1093,7 +1091,7 @@ export default {
               p {
                 font-size: 3rem;
                 margin-top: 1rem;
-                margin-left: -2rem;
+                margin-left: 5rem;
               }
             }
           }
@@ -1122,9 +1120,10 @@ export default {
             margin-top: 10rem;
 
             .moto {
-              margin-top: 10rem;
+              margin-top: 5rem;
               p {
-                margin-top: 0.5rem;
+                margin-top: 0rem;
+                font-size: 3rem;
               }
             }
           }
@@ -1317,7 +1316,10 @@ export default {
                 font-size: 3.5rem;
                 margin-top: 1.5rem;
                 line-height: 2rem;
-                margin-left: -2rem;
+                margin-left: 35rem;
+                @include responsive($xxl) {
+                  margin-left: 45rem;
+                }
               }
             }
           }

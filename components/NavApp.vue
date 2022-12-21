@@ -15,10 +15,10 @@
       <div class="links-container">
         <img src="../assets/Icons/close.svg" class="close-btn" alt="" />
         <div class="upper-nav">
-          <p>mesenbet.assefa@aau.edu.et | +25116504949</p>
+          <p>info@5alawoffice.com | +25116504949</p>
           <ul>
             <li>
-              <a href="mailto:mesenbet.assefa@aau.edu.et"
+              <a href="mailto:info@5alawoffice.com"
                 ><img src="../assets/Icons/mail.svg" alt="" />
               </a>
             </li>
@@ -515,9 +515,9 @@ export default {
 
   @include responsive($md) {
     header {
-      .mid-moto {
+      .mid-moto1 {
         .container {
-          .moto-wrapper {
+          .moto1-wrapper {
             display: flex;
             justify-content: center;
             margin-top: 15rem;
@@ -526,12 +526,11 @@ export default {
                 width: 18rem;
               }
             }
-            .moto {
+            .moto1 {
               margin-top: 10rem;
               p {
                 font-size: 3rem;
                 margin-top: 1rem;
-                margin-left: -2rem;
               }
             }
           }
