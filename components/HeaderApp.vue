@@ -599,6 +599,8 @@ export default {
 
 <style lang="scss">
 .body-main {
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway:wght@400;500;800&family=Seymour+One&display=swap');
+
   .slider {
     background-color: #09499233;
     margin-top: -8rem;
@@ -1059,8 +1061,10 @@ export default {
           .moto {
             margin-top: -2rem;
             p {
+              font-family: 'Raleway', sans-serif;
+              // font-family: 'Seymour One', sans-serif;
               margin-top: 35rem;
-              font-size: 2.8rem;
+              font-size: 2rem;
               color: $A-white;
               font-weight: 700;
               text-transform: uppercase;
@@ -1089,7 +1093,7 @@ export default {
             .moto {
               margin-top: 10rem;
               p {
-                font-size: 3rem;
+                font-size: 2rem;
                 margin-top: 1rem;
                 margin-left: 5rem;
               }
@@ -1123,7 +1127,7 @@ export default {
               margin-top: 5rem;
               p {
                 margin-top: 0rem;
-                font-size: 3rem;
+                font-size: 2rem;
               }
             }
           }
@@ -1313,7 +1317,7 @@ export default {
             .moto {
               margin-top: 15rem;
               p {
-                font-size: 3.5rem;
+                font-size: 2.5rem;
                 margin-top: 1.5rem;
                 line-height: 2rem;
                 margin-left: 35rem;
