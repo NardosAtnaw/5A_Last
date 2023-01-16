@@ -281,14 +281,13 @@
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
         >
-          <!-- <div class="rectangle">
-            <img src="../assets/Icons/Rectangle.svg" alt="" />
-          </div> -->
-          <div class="moto">
-            <p>EXPERTISE. EXPERIENCE. EXCELLENCE.</p>
-            <!-- <p>EXPERIENCE.</p>
-            <p>EXCELLENCE.</p> -->
+          <div class="rectangle">
+            <img src="../assets/Icons/logomoto.svg" alt="" />
           </div>
+          <!-- <div class="moto">
+            <p>EXPERTISE. EXPERIENCE. EXCELLENCE.</p>
+          
+          </div> -->
         </div>
       </div>
     </div>
@@ -599,7 +598,7 @@ export default {
 
 <style lang="scss">
 .body-main {
-  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway:wght@400;500;800&family=Seymour+One&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway:wght@400;500;800&family=Seymour+One&display=swap");
 
   .slider {
     background-color: #09499233;
@@ -1061,7 +1060,7 @@ export default {
           .moto {
             margin-top: -2rem;
             p {
-              font-family: 'Raleway', sans-serif;
+              font-family: "Raleway", sans-serif;
               // font-family: 'Seymour One', sans-serif;
               margin-top: 35rem;
               font-size: 2rem;
@@ -1087,7 +1086,7 @@ export default {
             margin-top: 5rem;
             .rectangle {
               img {
-                width: 18rem;
+                width: 28rem;
               }
             }
             .moto {
@@ -1306,11 +1305,11 @@ export default {
         .container {
           .moto-wrapper {
             justify-content: left;
-            margin-left: -34rem;
-            margin-top: 15rem;
+            margin-left: -40rem;
+            margin-top: 16rem;
             .rectangle {
               img {
-                width: 20rem;
+                width: 40rem;
               }
             }
 
