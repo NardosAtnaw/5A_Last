@@ -101,16 +101,7 @@
             v-for="row in allData"
             :key="row.post_id"
           >
-            <div
-              class="single-publication"
-              data-aos="slide-up"
-              data-aos-offset="20"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              data-aos-mirror="true"
-              data-aos-once="false"
-              data-aos-anchor-placement="top-center"
-            >
+            <div class="single-publication">
               <div class="img-wrapper">
                 <div class="lists">
                   <img

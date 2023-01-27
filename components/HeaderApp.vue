@@ -1044,6 +1044,7 @@ export default {
           // margin-top: -20rem;
 
           .rectangle {
+            margin-top: 10rem;
             @include responsive($xl) {
               margin-left: 40rem;
             }
@@ -1054,7 +1055,7 @@ export default {
                 margin-top: 10rem;
                 // width: 25rem;
               }
-              width: 15rem;
+              width: 20rem;
             }
           }
           .moto {
