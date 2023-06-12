@@ -548,9 +548,9 @@ export default {
               place-items: center;
               position: relative;
               margin-top: 2rem; 
-              .pub-img {
-                // position: relative;
-              }
+              // .pub-img {
+              //   // position: relative;
+              // }
               .pub-title {
                 position: absolute;
                 // top: 0;
