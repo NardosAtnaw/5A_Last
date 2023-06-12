@@ -21,10 +21,10 @@
       <div class="container">
         <div class="link">
           <ul class="public-link">
-          
+        
             <li><a href="blog"> Blog   <hr/></a></li>
-            <li><a href="news"> News  & Updates <hr/></a></li>
-
+            <li><a href="news"> News & Updates   <hr/></a></li>
+       
           </ul>
         </div>
       </div>
