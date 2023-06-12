@@ -56,8 +56,7 @@
         </div>
       </div>
     </section>
-    <section class="space"></section>
-    <ContactApp />
+
     <section class="space"></section>
     <FooterApp />
   </div>
