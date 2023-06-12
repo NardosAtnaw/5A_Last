@@ -21,14 +21,10 @@
       <div class="container">
         <div class="link">
           <ul class="public-link">
-            <li>
-              <a href="journal"
-                >Journal
-                <hr/> </a>
-            </li>
+        
             <li><a href="blog"> Blog   <hr/></a></li>
-            <li><a href="news"> News   <hr/></a></li>
-            <li><a href="publication"> Publication   <hr/></a></li>
+            <li><a href="news"> News & Updates   <hr/></a></li>
+       
           </ul>
         </div>
       </div>
