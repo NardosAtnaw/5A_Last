@@ -193,7 +193,7 @@
         </div>
       </div>
     </section> -->
-    <ContactApp />
+ 
     <section class="space"></section>
     <FooterApp />
   </div>
