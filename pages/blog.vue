@@ -35,25 +35,30 @@
     <section class="publication-post">
       <div class="container">
         <div class="search">
-          <!-- <div class="input-container">
-            <button
-              @click="search"
-              type="submit"
-              name="submit"
-              class="search-button"
-            >
-              <img src="../assets/Icons/search.svg" class="icon" alt="" />
-            </button>
-            <input
-              class="input-field"
-              type="search"
-              v-model="searchTerm"
-              placeholder="Search..."
-              name="search"
-            />
-          </div>
           <div class="search-object">
             <ul class="search-list">
+              <li>
+                          <a href="indu"
+                            >Industrials, Manufacturing & Transportation</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="energy">Energy, Mining & Infrastructure</a>
+                        </li>
+
+                        <li><a href="health">Healthcare & Life Sciences</a></li>
+                        <li><a href="hotel">Hotels, Resorts & Tourism</a></li>
+
+                        <li><a href="finance"> Financial Institutions</a></li>
+                        <li><a href="consumer">Consumer Goods & Retail</a></li>
+                        <li><a href="private">Private Equity</a></li>
+                        <li>
+                          <a href="telecom"
+                            >Technology, Media & Telecommunications</a
+                          >
+                        </li>
+                        <li><a href="real">Real Estate</a></li>
               <li>
                 <a href="coporate"> Coporate and Commercial</a>
               </li>
@@ -63,37 +68,21 @@
 
               <li><a href="employee">Employement and Immigration</a></li>
               <li><a href="charity">Charities & Nonprofit Organizations</a></li>
+              <li>
+                          <a href="employee">Employment & Immigration</a>
+                        </li>
+                        <li>
+                          <a href="construction"
+                            >Construction & Design</a
+                          >
+                        </li>
+                        <li>
+                          <a href="antitrust">Antitrust & Competition</a>
+                        </li>
             </ul>
-            <div class="recent-blog">
-              <h2>Recent Publication</h2>
-              <div class="wrapper">
-                <div class="recent">
-                  <img
-                    class="blog-picture"
-                    src="../assets/Image/blog.jpg"
-                    alt="tax"
-                  />
-                  <p>Taxation</p>
-                </div>
-                <div class="recent">
-                  <img
-                    class="blog-picture"
-                    src="../assets/Image/practice5.jpg"
-                    alt="employee"
-                  />
-                  <p>Organizations Law</p>
-                </div>
-                <div class="recent">
-                  <img
-                    class="blog-picture"
-                    src="../assets/Image/bussiess.jpg"
-                    alt="mining"
-                  />
-                  <p>Mining</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
+    
+          </div>
+       
         </div>
         <div class="all">
           <div

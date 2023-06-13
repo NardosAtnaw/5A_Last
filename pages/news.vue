@@ -92,35 +92,7 @@
                           <a href="antitrust">Antitrust & Competition</a>
                         </li>
             </ul>
-            <!-- <div class="recent-blog">
-              <h2>Recent Publication</h2>
-              <div class="wrapper">
-                <div class="recent">
-                  <img
-                    class="blog-picture"
-                    src="../assets/Image/blog.jpg"
-                    alt="tax"
-                  />
-                  <p>Taxation</p>
-                </div>
-                <div class="recent">
-                  <img
-                    class="blog-picture"
-                    src="../assets/Image/practice5.jpg"
-                    alt="employee"
-                  />
-                  <p>Organizations Law</p>
-                </div>
-                <div class="recent">
-                  <img
-                    class="blog-picture"
-                    src="../assets/Image/bussiess.jpg"
-                    alt="mining"
-                  />
-                  <p>Mining</p>
-                </div>
-              </div>
-            </div> -->
+    
           </div>
         </div>
         <div
@@ -249,7 +221,7 @@
         </div>
       </div>
     </section> -->
-    <ContactApp />
+
    <section class="space"></section>
     <FooterApp /> 
 
