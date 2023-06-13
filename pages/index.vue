@@ -2280,7 +2280,7 @@ export default {
       }
     }
     @include responsive($lg) {
-      height: 51.94rem;
+      height: 41.94rem;
     }
   }
 }
