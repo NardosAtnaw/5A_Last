@@ -35,7 +35,7 @@
     <section class="publication-post">
       <div class="container">
         <div class="search">
-          <div class="input-container">
+          <!-- <div class="input-container">
             <button @click="search" type="submit" name="submit" class="search-button">
               <img src="../assets/Icons/search.svg" class="icon" alt="" />
             </button>
@@ -46,9 +46,31 @@
               placeholder="Search..."
               name="search"
             />
-          </div>
+          </div> -->
           <div class="search-object">
             <ul class="search-list">
+              <li>
+                          <a href="indu"
+                            >Industrials, Manufacturing & Transportation</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="energy">Energy, Mining & Infrastructure</a>
+                        </li>
+
+                        <li><a href="health">Healthcare & Life Sciences</a></li>
+                        <li><a href="hotel">Hotels, Resorts & Tourism</a></li>
+
+                        <li><a href="finance"> Financial Institutions</a></li>
+                        <li><a href="consumer">Consumer Goods & Retail</a></li>
+                        <li><a href="private">Private Equity</a></li>
+                        <li>
+                          <a href="telecom"
+                            >Technology, Media & Telecommunications</a
+                          >
+                        </li>
+                        <li><a href="real">Real Estate</a></li>
               <li>
                 <a href="coporate"> Coporate and Commercial</a>
               </li>
@@ -70,7 +92,7 @@
                           <a href="antitrust">Antitrust & Competition</a>
                         </li>
             </ul>
-            <div class="recent-blog">
+            <!-- <div class="recent-blog">
               <h2>Recent Publication</h2>
               <div class="wrapper">
                 <div class="recent">
@@ -98,7 +120,7 @@
                   <p>Mining</p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div

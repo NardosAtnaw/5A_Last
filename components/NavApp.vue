@@ -178,8 +178,9 @@
             <ul class="sublinks2">
               <div class="corp-link">
                 <li><a href="blog">Blog</a></li>
-                <!-- <li><a href="news">News</a></li>
-                <li>
+                <li><a href="news">News & Updates</a></li>
+                
+                <!-- 
                   <a href="publication"> Publication</a>
                 </li>
 
