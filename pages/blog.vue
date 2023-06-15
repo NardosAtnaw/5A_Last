@@ -557,7 +557,8 @@ export default {
     .publication-post {
       .container {
         display: flex;
-        // flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        justify-items: start;
         gap: 1rem;
         .all {
           .publcation-wrapper {
