@@ -576,7 +576,7 @@ export default {
         }
         .search {
           margin-top: 0rem;
-          position: sticky;
+          // position: sticky;
           top: 0;
           .search-object {
             .recent-blog {
