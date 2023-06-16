@@ -461,7 +461,7 @@ export default {
       }
       .search {
         display: grid;
-        place-items: center;
+        // place-items: center;
 
         margin-top: 5rem;
         .input-container {
