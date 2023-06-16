@@ -437,7 +437,7 @@ export default {
               h4 {
                 @extend .title;
                 font-weight: 500;
-                color: $A-darkerblue;
+                color: #fff;
                 text-align:left;
                 line-height: 2rem;
               }
