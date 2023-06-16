@@ -404,7 +404,7 @@ export default {
     .container {
       .all {
         .publcation-wrapper {
-          background: #ecf2fd;
+          background: $A-lightblue;
           padding: 1rem;
           position: relative;
           .single-publication {
@@ -427,7 +427,7 @@ export default {
                   margin-right: 2rem;
                   @extend .title;
 
-                  text-align: center;
+                  text-align: left;
                   color: #fff;
                 }
               }
@@ -438,13 +438,14 @@ export default {
                 @extend .title;
                 font-weight: 500;
                 color: $A-darkerblue;
-                text-align: center;
+                text-align:left;
                 line-height: 2rem;
               }
               p {
                 @extend .text;
+                text-align:left;
                 margin-top: 0.94rem;
-                color: $A-darkerblue;
+                color: #fff;
               }
             }
           }
@@ -558,7 +559,7 @@ export default {
       .container {
         display: flex;
         flex-direction: row-reverse;
-        justify-items: start;
+        justify-content: start;
         gap: 1rem;
         .all {
           .publcation-wrapper {
