@@ -583,7 +583,7 @@ export default {
               .wrapper {
                 .recent {
                   display: flex;
-                  align-items: center;
+                  // align-items: center;
                   gap: 2rem;
                   margin-top: 2rem;
                   .blog-picture {
